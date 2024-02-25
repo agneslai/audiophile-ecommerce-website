@@ -1,0 +1,47 @@
+@import '../../assets/styles/config.scss';
+
+.sectionProducts {
+  margin-bottom: 30px;
+}
+
+.sectionProducts__wrapper {
+  position: relative;
+  display: flex;
+  background-color: $orange;
+  border-radius: 8px;
+  height: 560px;
+}
+
+
+.sectionProducts__zx9Image {
+  flex: 1;
+  background-image: url('../../assets/images/image-speaker-zx9.png');
+  background-repeat: no-repeat;
+  background-position: bottom -10px left 50%;
+  background-size: 410px 493px;
+}
+
+.sectionProducts__zx9 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  color: $white;
+
+  h1  {
+    font-size: rem(56);
+    line-height: 58px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-size: rem(15);
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+}
+
+

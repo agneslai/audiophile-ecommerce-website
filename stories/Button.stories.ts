@@ -28,6 +28,13 @@ export const Secondary: Story = {
   },
 };
 
+export const Black: Story = {
+  args: {
+    variant: 'black',
+    children: 'see product'
+  },
+};
+
 export const Transparent: Story = {
   args: {
     variant: 'transparent',

@@ -6,7 +6,7 @@ import { clsx } from 'clsx';
 import { IconArrowRight } from '@/app/assets/images';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'transparent';
+  variant?: 'primary' | 'secondary' | 'black' | 'transparent';
 }
 
 const Button = ({ variant = 'primary', type, className, children, onClick }: ButtonProps) => {
@@ -16,6 +16,8 @@ const Button = ({ variant = 'primary', type, className, children, onClick }: But
         return styles.mod__primary;
       case 'secondary':
         return styles.mod__secondary;
+      case 'black':
+        return styles.mod__black;
       case 'transparent':
         return styles.mod__transparent;
       default:

@@ -4,6 +4,7 @@ import IconCart from './icon-cart.svg';
 import ThumbnailEarphones from './image-category-thumbnail-earphones.png';
 import ThumbnailHeadphones from './image-category-thumbnail-headphones.png';
 import ThumbnailSpeakers from './image-category-thumbnail-speakers.png';
+import ImageSpeakerZx9 from './image-speaker-zx9.png';
 
 export {
   Logo,
@@ -12,4 +13,5 @@ export {
   ThumbnailEarphones,
   ThumbnailHeadphones,
   ThumbnailSpeakers,
+  ImageSpeakerZx9,
 };
