@@ -33,6 +33,8 @@
   }
   &.mod__transparent {
     background-color: transparent;
+    color: #00000050;
+    padding: 0;
 
     &:hover {
       color: $orange;
