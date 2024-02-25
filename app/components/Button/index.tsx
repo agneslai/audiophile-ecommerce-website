@@ -9,7 +9,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'transparent';
 }
 
-const Button = ({ variant = 'primary', children, onClick }: ButtonProps) => {
+const Button = ({ variant = 'primary', type, children, onClick }: ButtonProps) => {
   const getVarientStyle = () => {
     switch (variant) {
       case 'primary':
@@ -24,7 +24,11 @@ const Button = ({ variant = 'primary', children, onClick }: ButtonProps) => {
   }
 
   return (
-    <button className={clsx(styles.button, getVarientStyle())} onClick={onClick}>
+    <button
+      className={clsx(styles.button, getVarientStyle())}
+      type={type}
+      onClick={onClick}
+    >
       {children}
       {variant === 'transparent' &&
         <span><Image src={IconArrowRight} alt="icon arrow right" width={5} height={10} /></span>

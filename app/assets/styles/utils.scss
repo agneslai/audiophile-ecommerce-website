@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $container-padding-horizontal: 20px;
 $container-sm: 100%;
 $container-md: 100%;
@@ -7,7 +9,7 @@ $container-2xl: 1500px;
 $container-3xl: 1500px;
 
 @mixin container {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   padding: 0 $container-padding-horizontal;
 
@@ -34,4 +36,8 @@ $container-3xl: 1500px;
   @media (min-width: 1800px) {
     max-width: $container-3xl;
   }
+}
+
+@function rem($pixel, $context: 16) {
+  @return math.div($pixel, $context) * 1rem;
 }

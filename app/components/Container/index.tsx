@@ -1,13 +1,14 @@
-import React from 'react'
+import clsx from 'clsx';
 import styles from './index.module.scss';
 
 interface ContainerProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-const Container = ({children}: ContainerProps) => {
+const Container = ({children, className}: ContainerProps) => {
   return (
-    <div className={styles.container}>{children}</div>
+    <div className={clsx(styles.container, className)}>{children}</div>
   )
 }
 

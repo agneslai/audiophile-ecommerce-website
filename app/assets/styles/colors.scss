@@ -4,7 +4,8 @@ $grey: #F1F1F1;
 $light-grey: #FAFAFA;
 $cod-grey: #101010;
 $white: #FFF;
-$black: #000;
+$black: #191919;
+$pure-black: #000;
 
 :export {
   orange: $orange;
@@ -14,4 +15,5 @@ $black: #000;
   codGrey: $cod-grey;
   white: $white;
   black: $black;
+  pureBlack: $pure-black;
 }
