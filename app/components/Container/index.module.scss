@@ -1,0 +1,6 @@
+// Import config.scss so you have all the global configuration supports e.g. variables, mixins, etc.
+@import '../../assets/styles/config';
+
+.container {
+  @include container;
+}

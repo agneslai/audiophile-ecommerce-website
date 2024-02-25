@@ -1,0 +1,17 @@
+$orange: #D87D4A;
+$light-orange: #fbaf85;
+$grey: #F1F1F1;
+$light-grey: #FAFAFA;
+$cod-grey: #101010;
+$white: #FFF;
+$black: #000;
+
+:export {
+  orange: $orange;
+  lightOrange: $light-orange;
+  grey: $grey;
+  lightGrey: $light-grey;
+  codGrey: $cod-grey;
+  white: $white;
+  black: $black;
+}
