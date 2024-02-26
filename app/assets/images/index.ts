@@ -11,6 +11,7 @@ import ThumbnailSpeakers from './image-category-thumbnail-speakers.png';
 import ImageSpeakerZx7 from './image-speaker-zx7.jpg';
 import ImageSpeakerZx9 from './image-speaker-zx9.png';
 import ImageEarphoneYx1 from './image-earphones-yx1.jpg';
+import ImageBestGear from './image-best-gear.jpg';
 
 export {
   Logo,
@@ -22,5 +23,6 @@ export {
   ThumbnailSpeakers,
   ImageSpeakerZx7,
   ImageSpeakerZx9,
-  ImageEarphoneYx1
+  ImageEarphoneYx1,
+  ImageBestGear,
 };

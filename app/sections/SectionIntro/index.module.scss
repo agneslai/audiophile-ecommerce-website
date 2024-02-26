@@ -1,0 +1,54 @@
+@import '../../assets/styles/config.scss';
+
+.sectionIntro {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 100px 0;
+}
+
+.sectionIntro__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 0 30px;
+}
+
+.sectionIntro__content {
+  flex: 1;
+
+  div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px 0;
+    padding-right: 50px;
+
+    h3 {
+      font-size: rem(40);
+      font-weight: bold;
+      line-height: 44px;
+      letter-spacing: 1.43px;
+      text-transform: uppercase;
+
+      span {
+        color: $orange;
+      }
+    }
+
+    p {
+      font-size: rem(15);
+      font-weight: medium;
+      line-height: 25px;
+      color: #00000080;
+    }
+  }
+}
+
+.sectionIntro__image {
+  flex: 1;
+  border-radius: 8px;
+  object-fit: cover;
+  overflow: hidden;
+}
