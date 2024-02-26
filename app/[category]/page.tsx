@@ -6,6 +6,7 @@ import styles from "./page.module.scss";
 import Container from "@/app/components/Container";
 import CategoryProduct from "@/app/components/CategoryProduct";
 import SectionCategories from "@/app/sections/SectionCategories";
+import SectionIntro from "@/app/sections/SectionIntro";
 import { Product } from "../utils/types";
 import data from '../data.json';
 
@@ -43,9 +44,9 @@ export default function Category() {
             />
           ))}
         </div>
-
       </Container>
       <SectionCategories />
+      <SectionIntro />
     </main>
   );
 }
