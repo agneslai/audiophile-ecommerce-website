@@ -4,24 +4,38 @@
   margin-bottom: 30px;
 }
 
-.sectionProducts__wrapper {
+.sectionProducts__speaker {
   position: relative;
   display: flex;
   background-color: $orange;
   border-radius: 8px;
   height: 560px;
+  overflow: hidden;
 }
 
-
-.sectionProducts__zx9Image {
+.sectionProducts__speaker--imageWrapper {
+  position: relative;
   flex: 1;
-  background-image: url('../../assets/images/image-speaker-zx9.png');
-  background-repeat: no-repeat;
-  background-position: bottom -10px left 50%;
-  background-size: 410px 493px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-.sectionProducts__zx9 {
+.sectionProducts__speaker--patternBg {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  bottom: -400px;
+}
+
+.sectionProducts__speaker--image {
+  object-fit: contain;
+  width: 410px;
+  height: 493px;
+  transform: translateY(8px);
+}
+
+.sectionProducts__speaker--text {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -29,8 +43,9 @@
   align-items: flex-start;
   padding: 50px;
   color: $white;
+  z-index: 10;
 
-  h1  {
+  h1 {
     font-size: rem(56);
     line-height: 58px;
     letter-spacing: 2px;
@@ -43,5 +58,3 @@
     margin-bottom: 40px;
   }
 }
-
-
