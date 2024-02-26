@@ -5,17 +5,17 @@ import { ThumbnailEarphones, ThumbnailHeadphones, ThumbnailSpeakers } from '@/ap
 
 const CATEGORIES = [
   {
-    title: 'HEADPHONES',
+    title: 'headphones',
     image: ThumbnailHeadphones,
     imageAlt: 'headphone',
   },
   {
-    title: 'SPEAKERS',
+    title: 'speakers',
     image: ThumbnailSpeakers,
     imageAlt: 'speakers',
   },
   {
-    title: 'EARPHONES',
+    title: 'earphones',
     image: ThumbnailEarphones,
     imageAlt: 'earphones',
   },

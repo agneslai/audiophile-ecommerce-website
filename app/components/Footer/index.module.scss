@@ -2,13 +2,17 @@
 
 .footer {
   background-color: $black;
-  padding: 40px;
+  padding: 40px 0;
 }
 
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .footer__nav {

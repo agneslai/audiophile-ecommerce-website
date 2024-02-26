@@ -9,13 +9,15 @@ const Header = () => {
     <header className={styles.header}>
       <Container>
         <div className={styles.header__wrapper}>
-          <Image src={Logo} alt='logo' width={165} height={32} />
+          <Link href='.'>
+            <Image src={Logo} alt='logo' width={165} height={32} />
+          </Link>
           <nav className={styles.header__nav}>
             <ul>
-              <li><Link href="/">HOME</Link></li>
-              <li><Link href="/">HEADPHONES</Link></li>
-              <li><Link href="/">SPEAKERS</Link></li>
-              <li><Link href="/">EARPHONES</Link></li>
+              <li><Link href="./">HOME</Link></li>
+              <li><Link href="./headphones">HEADPHONES</Link></li>
+              <li><Link href="./speakers">SPEAKERS</Link></li>
+              <li><Link href="./earphones">EARPHONES</Link></li>
             </ul>
           </nav>
           <button className={styles.header__cartButton}>

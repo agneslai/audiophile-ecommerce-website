@@ -1,0 +1,59 @@
+@import '../../assets/styles/config.scss';
+
+.categoryProduct {
+  display: flex;
+  justify-content: space-between;
+  max-height: 560px;
+
+  &.mod__reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.categoryProduct__image {
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categoryProduct__content {
+  flex: 1;    
+}
+
+.categoryProduct__contentWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 0 0 125px;
+
+  &.mod__paddingRight {
+    padding: 0 125px 0 0;
+  }
+
+  h2 {
+    font-size: rem(40);
+    font-weight: bold;
+    line-height: 44px;
+    letter-spacing: 1.43px;
+    margin-bottom: 32px;
+  }
+
+  h3 {
+    font-size: rem(14);
+    letter-spacing: 10px;
+    color: $orange;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: rem(15);
+    font-weight: medium;
+    line-height: 25px;
+    color: #00000080;
+    margin-bottom: 40px;
+  }
+}

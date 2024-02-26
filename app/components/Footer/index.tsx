@@ -15,9 +15,9 @@ const Footer = () => {
           <nav className={styles.footer__nav}>
             <ul>
               <li><Link href="/">HOME</Link></li>
-              <li><Link href="/">HEADERPHONES</Link></li>
-              <li><Link href="/">SPEAKER</Link></li>
-              <li><Link href="/">EARPHONES</Link></li>
+              <li><Link href="./headphones">HEADERPHONES</Link></li>
+              <li><Link href="./speakers">SPEAKER</Link></li>
+              <li><Link href="./earphones">EARPHONES</Link></li>
             </ul>
           </nav>
         </div>

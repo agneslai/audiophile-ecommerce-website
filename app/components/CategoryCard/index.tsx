@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 import styles from './index.module.scss';
 import Button from '../Button';
 
@@ -8,14 +9,14 @@ interface Props {
   title: string;
 }
 
-const CategoryCard = ({image, imageAlt, title}: Props) => {
+const CategoryCard = ({ image, imageAlt, title }: Props) => {
   return (
     <div className={styles.categoryCard}>
       <div className={styles.categoryCard__image}>
         <Image src={image} alt={imageAlt} />
       </div>
       <p className={styles.categoryCard__title}>{title}</p>
-      <Button variant='transparent'>SHOP</Button>
+      <Link href={`./${title}`}><Button variant='transparent'>SHOP</Button></Link>
     </div>
   )
 }
