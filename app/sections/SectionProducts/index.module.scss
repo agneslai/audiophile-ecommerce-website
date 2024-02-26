@@ -1,5 +1,7 @@
 @import '../../assets/styles/config.scss';
 
+$productBannerMarginBottom: 40px;
+
 .sectionProducts {
   margin-bottom: 30px;
 }
@@ -11,6 +13,7 @@
   border-radius: 8px;
   height: 560px;
   overflow: hidden;
+  margin-bottom: $productBannerMarginBottom;
 }
 
 .sectionProducts__speaker--imageWrapper {
@@ -56,5 +59,57 @@
     font-size: rem(15);
     line-height: 25px;
     margin-bottom: 40px;
+  }
+}
+
+.sectionProducts__speakerZx7 {
+  border-radius: 8px;
+  background-image: url('../../assets/images/image-speaker-zx7.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px;
+  margin-bottom: $productBannerMarginBottom;
+
+  p {
+    font-size: rem(28);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+  }
+}
+
+.sectionProducts__earphone {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 30px;
+}
+
+.sectionProducts__earphone--image {
+  flex: 1;
+  border-radius: 8px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.sectionProducts__earphone--textWrapper {
+  flex: 1;
+  background-color: $grey;
+  border-radius: 8px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 0 50px;
+
+    p {
+      font-size: rem(28);
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 32px;
+    }
   }
 }
