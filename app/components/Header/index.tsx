@@ -14,10 +14,10 @@ const Header = () => {
           </Link>
           <nav className={styles.header__nav}>
             <ul>
-              <li><Link href="./">HOME</Link></li>
-              <li><Link href="./headphones">HEADPHONES</Link></li>
-              <li><Link href="./speakers">SPEAKERS</Link></li>
-              <li><Link href="./earphones">EARPHONES</Link></li>
+              <li><Link href="/">HOME</Link></li>
+              <li><Link href="/headphones">HEADPHONES</Link></li>
+              <li><Link href="/speakers">SPEAKERS</Link></li>
+              <li><Link href="/earphones">EARPHONES</Link></li>
             </ul>
           </nav>
           <button className={styles.header__cartButton}>

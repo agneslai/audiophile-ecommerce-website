@@ -16,7 +16,7 @@ const CategoryCard = ({ image, imageAlt, title }: Props) => {
         <Image src={image} alt={imageAlt} />
       </div>
       <p className={styles.categoryCard__title}>{title}</p>
-      <Link href={`./${title}`}><Button variant='transparent'>SHOP</Button></Link>
+      <Link href={`./${title}`}><Button variant='transparent' icon>SHOP</Button></Link>
     </div>
   )
 }

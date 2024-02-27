@@ -40,7 +40,9 @@ export default function Category() {
               image={product.image.desktop}
               imageAlt={product.name}
               name={product.name}
-              desc={product.description}
+              desc={product.description}              
+              newProduct={product.new}
+              link={`/${product.category}/${product.slug}`}
             />
           ))}
         </div>

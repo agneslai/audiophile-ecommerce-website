@@ -7,9 +7,10 @@ import { IconArrowRight } from '@/app/assets/images';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'black' | 'transparent';
+  icon?: boolean;
 }
 
-const Button = ({ variant = 'primary', type, className, children, onClick }: ButtonProps) => {
+const Button = ({ variant = 'primary', type, className, children, icon, onClick }: ButtonProps) => {
   const getVarientStyle = () => {
     switch (variant) {
       case 'primary':
@@ -32,7 +33,7 @@ const Button = ({ variant = 'primary', type, className, children, onClick }: But
       onClick={onClick}
     >
       {children}
-      {variant === 'transparent' &&
+      {icon &&
         <span><Image src={IconArrowRight} alt="icon arrow right" width={5} height={10} /></span>
       }
     </button>
