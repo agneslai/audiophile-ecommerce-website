@@ -29,7 +29,7 @@ const SectionCategories = () => {
           {CATEGORIES.map((category) => (
             <CategoryCard
               key={category.title}
-              title={category.title}
+              category={category.title}
               image={category.image}
               imageAlt={category.imageAlt}
             />

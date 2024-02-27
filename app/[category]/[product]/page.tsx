@@ -4,10 +4,13 @@ import { useCallback, useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import styles from './page.module.scss';
-import CategoryProduct from '@/app/components/CategoryProduct';
 import Container from '@/app/components/Container';
 import Button from '@/app/components/Button';
+import CategoryProduct from '@/app/components/CategoryProduct';
+import ProductCard from '@/app/components/ProductCard';
 import { Product } from "@/app/utils/types";
+import SectionIntro from '@/app/sections/SectionIntro';
+import SectionCategories from '@/app/sections/SectionCategories';
 import data from '../../data.json';
 
 const Product = () => {
@@ -82,7 +85,24 @@ const Product = () => {
             sizes="100vw"
           />
         </div>
+
+        <div className={styles.product__other}>
+          <h2>YOU MAY ALSO LIKE</h2>
+          <div className={styles.product__otherWrapper}>
+            {productDetails?.others.map((item) => (
+              <ProductCard
+                key={item.slug}
+                name={item.name}
+                image={item.image.desktop}
+                slug={item.slug}
+              />
+            ))}
+          </div>
+        </div>
       </Container>
+
+      <SectionCategories />
+      <SectionIntro />
     </div>
   )
 }
