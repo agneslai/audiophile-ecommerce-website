@@ -1,0 +1,53 @@
+@import '../../assets/styles/config.scss';
+
+.numberInput {
+  background-color: $grey;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: 120px;
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+.numberInput__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0 10px;
+  padding: 0 10px;
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: rem(13);
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #00000040;
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    font-size: rem(13);
+    font-weight: bold;
+    text-align: center;
+  }
+}

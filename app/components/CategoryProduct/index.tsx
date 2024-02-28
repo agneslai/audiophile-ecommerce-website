@@ -1,8 +1,10 @@
-import clsx from 'clsx';
+import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import clsx from 'clsx';
 import styles from './index.module.scss';
 import Button from '../Button';
+import NumberInput from '../NumberInput';
 
 interface CategoryProduct {
   index: number;
@@ -12,9 +14,12 @@ interface CategoryProduct {
   desc: string;
   newProduct: boolean;
   link?: string;
+  price?: number;
 }
 
-const CategoryProduct = ({ index, image, imageAlt, name, desc, newProduct, link }: CategoryProduct) => {
+const CategoryProduct = ({ index, image, imageAlt, name, desc, newProduct, link, price }: CategoryProduct) => {
+  const [quantity, setQuantity] = useState<number>(0);
+
   return (
     <div className={clsx(styles.categoryProduct, index % 2 !== 0 && styles.mod__reverse)}>
       <Image
@@ -31,6 +36,17 @@ const CategoryProduct = ({ index, image, imageAlt, name, desc, newProduct, link 
           {newProduct && <h3>NEW PRODUCT</h3>}
           <h2>{name}</h2>
           <p>{desc}</p>
+
+          {price &&
+            <div>
+              <p className={styles.categoryProduct__price}>$ {price.toLocaleString()}</p>
+
+              <div className={styles.categoryProduct__amountWrapper}>
+                <NumberInput onChangeValue={(v) => setQuantity(v)} />
+                <Button>Add To Cart</Button>
+              </div>
+            </div>
+          }
 
           {link &&
             <Link

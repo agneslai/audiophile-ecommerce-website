@@ -46,6 +46,7 @@ const Product = () => {
             imageAlt={productDetails?.name}
             name={productDetails?.name}
             desc={productDetails?.description}
+            price={productDetails?.price}
           />
         }
 
