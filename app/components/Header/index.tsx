@@ -1,12 +1,28 @@
+'use client'
+
+import { useState } from 'react';
+import clsx from 'clsx';
 import Image from 'next/image';
-import Container from '../Container';
-import styles from './index.module.scss';
-import { IconCart, Logo } from '@/app/assets/images';
 import Link from 'next/link';
+import styles from './index.module.scss';
+import Container from '../Container';
+import HeaderCartButton from '../HeaderCartButton';
+import { Logo } from '@/app/assets/images';
 
 const Header = () => {
+  const [showOverlay, setShowOverylay] = useState<boolean>(false);
+
+  const onPressCart = () => {
+    setShowOverylay(pre => !pre);
+  };
+
   return (
     <header className={styles.header}>
+      <div
+        className={clsx(styles.header__fullScreenOverlay, showOverlay && styles.mod__display)}
+        onClick={() => setShowOverylay(false)}
+      />
+
       <Container>
         <div className={styles.header__wrapper}>
           <Link href='/'>
@@ -20,13 +36,11 @@ const Header = () => {
               <li><Link href="/earphones">EARPHONES</Link></li>
             </ul>
           </nav>
-          <button className={styles.header__cartButton}>
-            <Image src={IconCart} alt='cart icon' />
-          </button>
+          <HeaderCartButton onPressCart={onPressCart} showPopUp={showOverlay} />
         </div>
       </Container>
     </header>
   )
 }
 
-export default Header
+export default Header;

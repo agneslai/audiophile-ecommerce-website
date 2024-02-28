@@ -1,0 +1,73 @@
+@import '../../assets/styles/config';
+
+.headerCartButton {
+  position: relative;
+  background-color: $black;
+  cursor: pointer;
+}
+
+.headerCartButton__popup {
+  display: flex;
+  flex-direction: column;
+  width: 377px;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 32px;
+  z-index: 60;
+  position: absolute;
+  right: 0;
+  transform: translateY(25%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+
+  &.mod__display {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.headerCartButton__titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+
+  p {
+    font-size: rem(18);
+    font-weight: bold;
+    letter-spacing: 1.29px;
+  }
+
+  button span {
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+}
+
+.headerCartButton__items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+  margin-bottom: 32px;
+}
+
+.headerCartButton__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerCartButton__imageWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 16px;
+}
+
+.headerCartButton__totalWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}

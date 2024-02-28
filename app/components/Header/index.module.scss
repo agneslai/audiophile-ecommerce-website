@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
+  height: 110px;
 }
 
 .header__wrapper {
@@ -14,12 +15,6 @@
   align-items: center;
   padding: 32px 0 36px 0;
   border-bottom: 1px solid #979797;
-}
-
-.header__cartButton {
-  border: none;
-  background-color: $black;
-  cursor: pointer;
 }
 
 .header__nav {
@@ -47,5 +42,24 @@
     &:hover {
       color: $orange;
     }
+  }
+}
+
+.header__fullScreenOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  top: 109px;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  &.mod__display {
+    z-index: 50;
+    opacity: 0.5;
+    pointer-events: all;
   }
 }
